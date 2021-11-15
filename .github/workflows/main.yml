@@ -19,9 +19,10 @@ jobs:
 
     - run: pip install pre-commit-mirror-maker
 
-    - run: pre-commit-mirror . --language node --package-name dprint --types text --entry 'dprint fmt' --id dprint
-
     - run: |
         git config --global user.name "Adam's Bot"
         git config --global user.email 'bot@adamj.eu'
-        git push origin HEAD:refs/heads/main --tags
+
+    - run: pre-commit-mirror . --language node --package-name dprint --types text --entry 'dprint fmt' --id dprint
+
+    - run: git push origin HEAD:refs/heads/main --tags

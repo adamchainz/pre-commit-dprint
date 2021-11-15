@@ -15,4 +15,6 @@ Add to your pre-commit config:
         hooks:
         -   id: dprint
 
-You’ll also need a `dprint configuration file <https://dprint.dev/config/>`__ in the root of your repository.
+Then add a ``dprint.json`` (or ``.dprint.json``) `configuration file <https://dprint.dev/config/>`__ in the root of your repository.
+
+By default all text files are passed to dprint, which then only acts on files for which it has a relevant plugin configured.

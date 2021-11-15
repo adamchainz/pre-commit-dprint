@@ -1,0 +1,27 @@
+name: main
+
+on:
+  push:
+    branches:
+    - main
+  schedule:
+  - cron: '15 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: main
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-python@v2
+
+    - run: pip install pre-commit-mirror-maker
+
+    - run: pre-commit-mirror . --language node --package-name dprint --types text --entry 'dprint fmt' --id dprint
+
+    - run: |
+        git config --global user.name "Adam's Bot"
+        git config --global user.email 'bot@adamj.eu'
+        git push origin HEAD:refs/heads/main --tags

@@ -1,0 +1,9 @@
+-   id: dprint
+    name: dprint
+    entry: dprint fmt
+    language: node
+    'types': [text]
+    args: []
+    require_serial: false
+    additional_dependencies: ["dprint@0.0.1"]
+    minimum_pre_commit_version: '0'

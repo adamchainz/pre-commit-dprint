@@ -6,5 +6,5 @@
     'types': [text]
     args: []
     require_serial: false
-    additional_dependencies: ["dprint@0.31.0"]
+    additional_dependencies: ["dprint@0.31.1"]
     minimum_pre_commit_version: '0'

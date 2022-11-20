@@ -1,10 +1,7 @@
 -   id: dprint
     name: dprint
-    description: 'A pluggable and configurable code formatting platform written in Rust.'
+    description: 'Pluggable and configurable code formatting platform (npm install)'
     entry: dprint fmt
     language: node
     'types': [text]
-    args: []
-    require_serial: false
     additional_dependencies: ["dprint@0.32.2"]
-    minimum_pre_commit_version: '0'

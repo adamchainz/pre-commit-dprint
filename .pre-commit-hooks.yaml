@@ -6,3 +6,11 @@
     'types': [text]
     additional_dependencies: ["dprint@0.32.2"]
     stages: [commit, merge-commit, push, manual]
+-   id: dprint-src
+    name: dprint
+    description: 'Pluggable and configurable code formatting platform (source install)'
+    entry: dprint fmt
+    language: rust
+    'types': [text]
+    additional_dependencies: ["cli:dprint:0.32.2"]
+    stages: [commit, merge-commit, push, manual]

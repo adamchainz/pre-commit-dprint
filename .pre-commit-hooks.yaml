@@ -5,3 +5,4 @@
     language: node
     'types': [text]
     additional_dependencies: ["dprint@0.32.2"]
+    stages: [commit, merge-commit, push, manual]
